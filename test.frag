@@ -54,8 +54,9 @@ float diffraction(vec3 pos, vec3 light){
 
 void main(){
   vec2 p = gl_FragCoord.xy / u_resolution.xy;
-  p *= 0.5;
-  p -= 0.5;
+  //p *= 0.5;
+  //p -= 0.5;
+  p -= 1.0;
   vec2 m = mouse / u_resolution.xy;
   m.y *= -1.0;
   m -= vec2(0.5,-0.5);
