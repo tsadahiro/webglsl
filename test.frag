@@ -56,9 +56,10 @@ void main(){
   vec2 p = gl_FragCoord.xy / u_resolution.xy;
   p *= 0.5;
   p -= 0.5;
-  vec2 m = mouse / u_resolution.xy;
+  vec2 m = mouse / u_resolution.x;
+  m.x *= 0.5;
   m.y *= -0.5;
-  m -= vec2(0.25,-0.25);
+  m.x -= 0.5;
 
   
   vec3 camera = vec3(0,0,-20);
